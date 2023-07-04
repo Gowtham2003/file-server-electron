@@ -12,6 +12,7 @@ const createWindow = () => {
   ipcMain.handle("dialog:select-dir", handleDirOpen);
   ipcMain.handle("server:start", handleStart);
   ipcMain.handle("server:stop", stopServer);
+  ipcMain.handle("app:get-hosts", getAddresses);
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 400,

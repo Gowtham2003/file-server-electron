@@ -48,4 +48,16 @@ module.exports = {
       },
     },
   ],
+  publishers: [
+    {
+      name: "@electron-forge/publisher-github",
+      config: {
+        repository: {
+          owner: "Gowtham2003",
+          name: "file-server-electron",
+        },
+        prerelease: true,
+      },
+    },
+  ],
 };

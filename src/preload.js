@@ -8,6 +8,7 @@ const api = {
   startServer: (path) => ipcRenderer.invoke("server:start", path),
   stopServer: () => ipcRenderer.invoke("server:stop"),
   hosts: () => getAddresses(),
+  getHosts: () => ipcRenderer.invoke("app:get-hosts"),
 };
 if (process.contextIsolated) {
   try {
