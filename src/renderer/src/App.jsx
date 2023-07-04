@@ -72,7 +72,7 @@ function App() {
       {status && (
         <span className="mx-auto p-4 dark:bg-slate-200 ">
           {status && (
-            <QRCodeSVG value={`http://${window.api.hosts()[0]}:3000/`} />
+            <QRCodeSVG value={`http://${window.api.hosts()[0]}:1234/`} />
           )}
         </span>
       )}
@@ -82,7 +82,7 @@ function App() {
             className="rounded-lg w-auto bg-indigo-300 p-2"
             // href={`http://${window.api.hosts()[0]}:3000/`}
           >
-            http://{window.api.hosts()[0]}:3000/
+            http://{window.api.hosts()[0]}:1234/
           </span>
         )}
       </div>

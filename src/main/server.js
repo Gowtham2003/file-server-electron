@@ -11,7 +11,7 @@ let fastify;
 
 export const startServer = async (location) => {
   if (!fastify) {
-    fastify = Fastify({ logger: true, forceCloseConnections: true });
+    fastify = Fastify({ forceCloseConnections: true });
 
     fastify.register(fastifyStatic, {
       root: path.normalize(location),
@@ -75,7 +75,7 @@ export const startServer = async (location) => {
     });
 
     try {
-      await fastify.listen({ host: "0.0.0.0", port: 3000 });
+      await fastify.listen({ host: "0.0.0.0", port: 1234 });
     } catch (err) {
       fastify.log.error(err);
       fastify = undefined;
