@@ -1,5 +1,7 @@
 // Declare a route
 
+import ciao, { getResponder } from "@homebridge/ciao";
+
 // import Fastify from "fastify";
 // import fastifyStatic from "@fastify/static";
 // import path from "path";
@@ -8,6 +10,7 @@ const fastifyStatic = require("@fastify/static");
 const path = require("path");
 
 let fastify;
+let responder;
 
 export const startServer = async (location) => {
   if (!fastify) {
@@ -76,6 +79,16 @@ export const startServer = async (location) => {
 
     try {
       await fastify.listen({ host: "0.0.0.0", port: 1234 });
+      responder = getResponder(fastify.server.address().port);
+      const service = responder.createService({
+        name: "FileServer",
+        type: "http",
+        port: fastify.server.address().port,
+        txt: {
+          path: location,
+        },
+      });
+      await service.advertise();
     } catch (err) {
       fastify.log.error(err);
       fastify = undefined;
@@ -91,6 +104,9 @@ export const stopServer = async () => {
     fastify.log.info("Closing server...");
     // Close all active connections forcefully
     await fastify.close();
+    if (responder) {
+      await responder.shutdown();
+    }
     fastify = undefined;
   }
   return true;
