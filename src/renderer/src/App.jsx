@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { QRCodeSVG } from "qrcode.react";
 import Chart from "./components/Chart";
 
@@ -21,6 +21,7 @@ function App() {
     const dirpath = await openDialog();
     startServer(dirpath);
   };
+
   return (
     <div className="m-2 mt-4 flex flex-col space-y-4">
       <h1 className="font-bold text-teal-600 dark:text-teal-400 text-2xl text-center">

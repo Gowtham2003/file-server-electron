@@ -985,6 +985,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@leichtgewicht/ip-codec@npm:^2.0.1":
+  version: 2.0.4
+  resolution: "@leichtgewicht/ip-codec@npm:2.0.4"
+  checksum: 468de1f04d33de6d300892683d7c8aecbf96d1e2c5fe084f95f816e50a054d45b7c1ebfb141a1447d844b86a948733f6eebd92234da8581c84a1ad4de2946a2d
+  languageName: node
+  linkType: hard
+
 "@lukeed/ms@npm:^2.0.1":
   version: 2.0.1
   resolution: "@lukeed/ms@npm:2.0.1"
@@ -1609,6 +1616,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"array-flatten@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "array-flatten@npm:2.1.2"
+  checksum: e8988aac1fbfcdaae343d08c9a06a6fddd2c6141721eeeea45c3cf523bf4431d29a46602929455ed548c7a3e0769928cdc630405427297e7081bd118fdec9262
+  languageName: node
+  linkType: hard
+
 "asar@npm:^3.0.0, asar@npm:^3.1.0":
   version: 3.2.0
   resolution: "asar@npm:3.2.0"
@@ -1777,6 +1791,18 @@ __metadata:
     type-is: ~1.6.18
     unpipe: 1.0.0
   checksum: f1050dbac3bede6a78f0b87947a8d548ce43f91ccc718a50dd774f3c81f2d8b04693e52acf62659fad23101827dd318da1fb1363444ff9a8482b886a3e4a5266
+  languageName: node
+  linkType: hard
+
+"bonjour-service@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "bonjour-service@npm:1.1.1"
+  dependencies:
+    array-flatten: ^2.1.2
+    dns-equal: ^1.0.0
+    fast-deep-equal: ^3.1.3
+    multicast-dns: ^7.2.5
+  checksum: 832d0cf78b91368fac8bb11fd7a714e46f4c4fb1bb14d7283bce614a6fb3aae2f3fe209aba5b4fa051811c1cab6921d073a83db8432fb23292f27dd4161fb0f1
   languageName: node
   linkType: hard
 
@@ -2521,6 +2547,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dns-equal@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "dns-equal@npm:1.0.0"
+  checksum: a8471ac849c7c13824f053babea1bc26e2f359394dd5a460f8340d8abd13434be01e3327a5c59d212f8c8997817450efd3f3ac77bec709b21979cf0235644524
+  languageName: node
+  linkType: hard
+
+"dns-packet@npm:^5.2.2":
+  version: 5.6.0
+  resolution: "dns-packet@npm:5.6.0"
+  dependencies:
+    "@leichtgewicht/ip-codec": ^2.0.1
+  checksum: 1b643814e5947a87620f8a906287079347492282964ce1c236d52c414e3e3941126b96581376b180ba6e66899e70b86b587bc1aa23e3acd9957765be952d83fc
+  languageName: node
+  linkType: hard
+
 "dotenv-expand@npm:^5.1.0":
   version: 5.1.0
   resolution: "dotenv-expand@npm:5.1.0"
@@ -3158,6 +3200,7 @@ __metadata:
     ajv: ^8.12.0
     ajv-formats: ^2.1.1
     autoprefixer: ^10.4.14
+    bonjour-service: ^1.1.1
     electron: 25.2.0
     electron-squirrel-startup: ^1.0.0
     fastify: ^4.19.1
@@ -4721,6 +4764,18 @@ __metadata:
   version: 2.1.3
   resolution: "ms@npm:2.1.3"
   checksum: aa92de608021b242401676e35cfa5aa42dd70cbdc082b916da7fb925c542173e36bce97ea3e804923fe92c0ad991434e4a38327e15a1b5b5f945d66df615ae6d
+  languageName: node
+  linkType: hard
+
+"multicast-dns@npm:^7.2.5":
+  version: 7.2.5
+  resolution: "multicast-dns@npm:7.2.5"
+  dependencies:
+    dns-packet: ^5.2.2
+    thunky: ^1.0.2
+  bin:
+    multicast-dns: cli.js
+  checksum: 00b8a57df152d4cd0297946320a94b7c3cdf75a46a2247f32f958a8927dea42958177f9b7fdae69fab2e4e033fb3416881af1f5e9055a3e1542888767139e2fb
   languageName: node
   linkType: hard
 
@@ -6375,6 +6430,13 @@ __metadata:
   version: 2.3.8
   resolution: "through@npm:2.3.8"
   checksum: a38c3e059853c494af95d50c072b83f8b676a9ba2818dcc5b108ef252230735c54e0185437618596c790bbba8fcdaef5b290405981ffa09dce67b1f1bf190cbd
+  languageName: node
+  linkType: hard
+
+"thunky@npm:^1.0.2":
+  version: 1.1.0
+  resolution: "thunky@npm:1.1.0"
+  checksum: 993096c472b6b8f30e29dc777a8d17720e4cab448375041f20c0cb802a09a7fb2217f2a3e8cdc11851faa71c957e2db309357367fc9d7af3cb7a4d00f4b66034
   languageName: node
   linkType: hard
 

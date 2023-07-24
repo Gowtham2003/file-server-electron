@@ -1,7 +1,7 @@
 // Declare a route
 
 import ciao, { getResponder } from "@homebridge/ciao";
-
+import { Bonjour } from "bonjour-service";
 // import Fastify from "fastify";
 // import fastifyStatic from "@fastify/static";
 // import path from "path";
